@@ -9,7 +9,7 @@ sync:
 - .:/usr/src/app
 forward:
 - 2345:2345
-- 8080:8080
+- 8082:8082
 volumes:
 - /go/pkg/
 - /root/.cache/go-build/
