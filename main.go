@@ -14,5 +14,6 @@ func main() {
 }
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "Hello okteto2!")
+    fmt.Println("Hit endpoint")
+    fmt.Fprint(w, "Hello okteto!")
 }
