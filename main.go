@@ -11,9 +11,14 @@ func main() {
     if err := http.ListenAndServe(":8082", nil); err != nil {
         panic(err)
     }
+    
 }
+
+var x int8 = 0
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Hit endpoint")
-    fmt.Fprint(w, "Hello okteto!")
+    x++
+    s := fmt.Sprintf("%d", x)
+    fmt.Fprint(w, "Hello visitor"+ s +"!")
 }
