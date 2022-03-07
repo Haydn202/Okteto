@@ -11,14 +11,13 @@ func main() {
     if err := http.ListenAndServe(":8082", nil); err != nil {
         panic(err)
     }
-    
 }
 
-var x int8 = 0
+var visNumber int8 = 0
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
     fmt.Println("Hit endpoint")
-    x++
-    s := fmt.Sprintf("%d", x)
-    fmt.Fprint(w, "Hello visitor"+ s +"!")
+    visNumber++
+    visString := fmt.Sprintf("%d", visNumber)
+    fmt.Fprint(w, "Hello Okteto"+ visString +"!")
 }
