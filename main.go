@@ -16,8 +16,7 @@ func main() {
 var visNumber int8 = 0
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("Hit endpoint")
     visNumber++
-    visString := fmt.Sprintf("%d", visNumber)
-    fmt.Fprint(w, "Hello Okteto"+ visString +"!")
+    // visString := fmt.Sprintf("%d", visNumber)
+    fmt.Fprint(w, "Hello Okteto!")
 }
